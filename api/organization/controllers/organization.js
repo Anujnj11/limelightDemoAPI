@@ -9,6 +9,7 @@ const { sanitizeEntity } = require('strapi-utils');
 module.exports = {
     findFirst: async ctx => {
         const firstOrganization = await strapi.services.organization.findOne();
+        
         return sanitizeEntity(firstOrganization, { model: strapi.models.organization });
     }
 };
