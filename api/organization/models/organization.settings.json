@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "organizations",
+  "info": {
+    "name": "Organization",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text"
+    },
+    "website": {
+      "type": "string",
+      "regex": "^((https?|ftp|smtp):\\/\\/)?(www.)?[a-z0-9]+\\.[a-z]+(\\/[a-zA-Z0-9#]+\\/?)*$"
+    },
+    "location": {
+      "type": "string"
+    },
+    "jobs": {
+      "collection": "job",
+      "via": "organization"
+    },
+    "users": {
+      "type": "component",
+      "repeatable": true,
+      "component": "users.user",
+      "required": true
+    }
+  }
+}

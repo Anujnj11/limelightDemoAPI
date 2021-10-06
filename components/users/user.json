@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_users_users",
+  "info": {
+    "name": "user",
+    "icon": "address-book",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "admin_user": {
+      "plugin": "admin",
+      "model": "user"
+    },
+    "organization_roles": {
+      "collection": "organization-role"
+    }
+  }
+}
